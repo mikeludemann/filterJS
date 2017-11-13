@@ -1,6 +1,7 @@
 # filterJS
 
 Filtering elements with different animation
+Using "data-filter" Attribute 
 
 Example
 

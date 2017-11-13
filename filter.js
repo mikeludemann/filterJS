@@ -5,28 +5,68 @@ filtering.showing = {
     fading: function(elements, clickElement, eventElement, timer, dataAttribute, attributeSelector){
 
         var showElements = $(elements);
+        
+        if(eventElement.toLowerCase() == "hover"){
 
-        var elementEvent = $(clickElement).on(eventElement, function(){
+            var elementEvent = $(clickElement).hover(function(){
 
-        var filterActive = elementEvent.filter(this).data(dataAttribute);
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
 
-            showElements.hide(timer).filter(attributeSelector + filterActive).fadeIn(timer);
+                showElements.hide(timer).filter(attributeSelector + filterActive).fadeIn(timer);
+
+        }, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+                
+                showElements.show(timer);
 
         });
+
+        } else {
+
+            var elementEvent = $(clickElement).on(eventElement, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+
+                showElements.hide(timer).filter(attributeSelector + filterActive).fadeIn(timer);
+
+            });
+
+        }
 
     },
 
     sliding: function(elements, clickElement, eventElement, timer, dataAttribute, attributeSelector){
 
         var showElements = $(elements);
+        
+        if(eventElement.toLowerCase() == "hover"){
 
-        var elementEvent = $(clickElement).on(eventElement, function(){
+            var elementEvent = $(clickElement).hover(function(){
 
-        var filterActive = elementEvent.filter(this).data(dataAttribute);
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
 
-            showElements.hide(timer).filter(attributeSelector + filterActive).slideDown(timer);
+                showElements.hide(timer).filter(attributeSelector + filterActive).slideDown(timer);
+
+        }, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+                
+                showElements.show(timer);
 
         });
+
+        } else {
+
+            var elementEvent = $(clickElement).on(eventElement, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+
+                showElements.hide(timer).filter(attributeSelector + filterActive).slideDown(timer);
+
+            });
+
+        }
 
     },
 
@@ -35,14 +75,34 @@ filtering.showing = {
         var showElements = $(elements);
 
         var widthElements = $(elements).css("width");
+        
+        if(eventElement.toLowerCase() == "hover"){
 
-        var elementEvent = $(clickElement).on(eventElement, function(){
+            var elementEvent = $(clickElement).hover(function(){
 
-        var filterActive = elementEvent.filter(this).data(dataAttribute);
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
 
-            showElements.css({"width": "0"}).hide(timer).filter(attributeSelector + filterActive).show(timer).animate({"width": widthElements});
+                showElements.css({"width": "0"}).hide(timer).filter(attributeSelector + filterActive).show(timer).animate({"width": widthElements});
+
+        }, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+
+                showElements.css({"width": widthElements}).show(timer);
 
         });
+
+        } else {
+
+            var elementEvent = $(clickElement).on(eventElement, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+
+                showElements.css({"width": "0"}).hide(timer).filter(attributeSelector + filterActive).show(timer).animate({"width": widthElements});
+
+            });
+
+        }
 
     },
 
@@ -51,14 +111,34 @@ filtering.showing = {
         var showElements = $(elements);
 
         var heightElements = $(elements).css("height");
+        
+        if(eventElement.toLowerCase() == "hover"){
 
-        var elementEvent = $(clickElement).on(eventElement, function(){
+            var elementEvent = $(clickElement).hover(function(){
 
-        var filterActive = elementEvent.filter(this).data(dataAttribute);
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
 
-            showElements.css({"height": "0"}).hide(timer).filter(attributeSelector + filterActive).show(timer).animate({"height": heightElements});
+                showElements.css({"height": "0"}).hide(timer).filter(attributeSelector + filterActive).show(timer).animate({"height": heightElements});
+
+        }, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+
+                showElements.css({"height": heightElements}).show(timer);
 
         });
+
+        } else {
+
+            var elementEvent = $(clickElement).on(eventElement, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+
+                showElements.css({"height": "0"}).hide(timer).filter(attributeSelector + filterActive).show(timer).animate({"height": heightElements});
+
+            });
+
+        }
 
     },
 
@@ -69,13 +149,33 @@ filtering.showing = {
         var widthElements = $(elements).css("width");
         var heightElements = $(elements).css("height");
 
-        var elementEvent = $(clickElement).on(eventElement, function(){
+        if(eventElement.toLowerCase() == "hover"){
 
-        var filterActive = elementEvent.filter(this).data(dataAttribute);
+            var elementEvent = $(clickElement).hover(function(){
 
-            showElements.css({"height": "0", "width": "0"}).hide(timer).filter(attributeSelector + filterActive).show(timer).animate({"height": heightElements, "width": widthElements});
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+
+                showElements.css({"height": "0", "width": "0"}).hide(timer).filter(attributeSelector + filterActive).show(timer).animate({"height": heightElements, "width": widthElements});
+
+        }, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+
+                showElements.css({"height": heightElements, "width": widthElements}).show(timer);
 
         });
+
+        } else {
+
+            var elementEvent = $(clickElement).on(eventElement, function(){
+
+                var filterActive = elementEvent.filter(this).data(dataAttribute);
+
+                showElements.css({"height": "0", "width": "0"}).hide(timer).filter(attributeSelector + filterActive).show(timer).animate({"height": heightElements, "width": widthElements});
+
+            });
+
+        }
 
     }
 
