@@ -50,6 +50,50 @@ Example with data attribute filter
 
 ```code
 
-TBD
+Using diffent modules
+
+filtering.showing.fading: function(elements, dataElements, dataAttribute, dataAttributeAll, clickElement, eventElement, timer);
+
+With Parameter
+filtering.showing.fading(".box","[data-name]","filter","all",".btn","click",1000);
+filtering.showing.fading(".box","[data-name]","filter","all",".btn","hover",1000);
+
+filtering.showing.sliding: function(elements, dataElements, dataAttribute, dataAttributeAll, clickElement, eventElement, timer);
+
+With Parameter
+filtering.showing.sliding(".box","[data-name]","filter","all",".btn","click",1000);
+filtering.showing.sliding(".box","[data-name]","filter","all",".btn","hover",1000);
+
+filtering.showing.animateWidth: function(elements, dataElements, dataAttribute, dataAttributeAll, clickElement, eventElement, timer);
+
+With Parameter
+filtering.showing.animateWidth(".box","[data-name]","filter","all",".btn","click",1000);
+filtering.showing.animateWidth(".box","[data-name]","filter","all",".btn","hover",1000);
+
+filtering.showing.animateHeight: function(elements, dataElements, dataAttribute, dataAttributeAll, clickElement, eventElement, timer);
+
+With Parameter
+filtering.showing.animateHeight(".box","[data-name]","filter","all",".btn","click",1000);
+filtering.showing.animateHeight(".box","[data-name]","filter","all",".btn","hover",1000);
+
+filtering.showing.animateWidthAndHeight: function(elements, dataElements, dataAttribute, dataAttributeAll, clickElement, eventElement, timer);
+
+With Parameter
+filtering.showing.animateWidthAndHeight(".box","[data-name]","filter","all",".btn","click",1000);
+filtering.showing.animateWidthAndHeight(".box","[data-name]","filter","all",".btn","hover",1000);
+
+Using datt Attribute in HTML
+
+Filter Elements
+<div <The name of dataAttribute in your function>="text">...</div>
+
+With Parameter
+<div data-filter="text">...</div>
+
+Search Elements
+<div data-<The name of dataElements in your function>=<The value of dataAttribute>>...</div>
+
+With Parameter
+<div data-name="test">...</div>
 
 ```
