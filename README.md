@@ -39,10 +39,18 @@ filtering.showing.animateWidthAndHeight(".box",".btn","click","fast","filter",".
 
 Using datt Attribute in HTML
 
+Filter Elements
 <div data-<The name of dataAttribute in your function>="text">...</div>
 
 With Parameter
 <div data-filter="text">...</div>
+
+Search Elements
+<div <The attribute and value>>...</div>
+
+With Parameter
+<div class="test">...</div>
+<div id="test">...</div>
 
 ```
 
